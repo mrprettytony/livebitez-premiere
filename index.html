@@ -2,50 +2,56 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FREESTYLE IS THE VISION - LiveBitez Premiere</title>
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#000000">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<link rel="icon" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f525.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#080808">
+<title>FISSHHFILET × LIVEBITEZ PREMIERE™ v2</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;800&display=swap" rel="stylesheet">
 <style>
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{background:#000;color:#fff;font-family:-apple-system,BlinkMacSystemFont,sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px}
-  h1{font-size:42px;font-weight:900;letter-spacing:-2px;text-align:center;line-height:.9}
-  h1 span{background:linear-gradient(90deg,#fff,#888);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-  .tag{margin:16px 0 32px;border:1px solid #333;padding:8px 16px;border-radius:100px;font-size:12px;letter-spacing:2px;color:#888}
-  .card{width:100%;max-width:400px;background:#111;border:1px solid #222;border-radius:24px;padding:24px}
-  .btn{width:100%;background:#fff;color:#000;border:0;padding:18px;border-radius:16px;font-weight:900;font-size:16px;letter-spacing:1px;margin-top:12px}
-  .btn:active{transform:scale(.98)}
-  .status{font-size:12px;color:#555;text-align:center;margin-top:16px}
+:root{--bg:#080808;--bg2:#111;--card:#151515;--line:#222;--white:#F5F2ED;--lime:#D6FF57;--muted:#8A8884}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;background:var(--bg)}body{background:var(--bg);color:var(--white);font-family:'Inter',system-ui;overflow-x:hidden}
+img{display:block;width:100%}a{color:inherit;text-decoration:none}button{border:0;background:none;color:inherit;font:inherit}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:linear-gradient(to bottom,rgba(0,0,0,.92),transparent);backdrop-filter:blur(14px)}
+.logo{font-family:'Bebas Neue';font-size:21px;letter-spacing:.07em;line-height:.9}.logo span{display:block;font-family:'Inter';font-size:9px;color:var(--muted);letter-spacing:.22em;margin-top:2px}
+.live-pill{display:flex;align-items:center;gap:7px;border:1px solid #222;border-radius:100px;padding:5px 11px;font-size:10px;font-weight:800;letter-spacing:.16em}.live-dot{width:7px;height:7px;background:#FF3B30;border-radius:50%;box-shadow:0 0 10px #FF3B30;animation:pulse 1.6s infinite}
+.hero{position:relative;min-height:94svh;display:flex;flex-direction:column;justify-content:flex-end;padding:90px 18px 26px;background:#000;overflow:hidden}
+.hero-bg{position:absolute;inset:0}.hero-bg img{height:100%;object-fit:cover;filter:brightness(.7)}.hero-bg:after{content:'';position:absolute;inset:0;background:linear-gradient(to top,#080808 20%,rgba(0,0,0,.2) 60%,rgba(0,0,0,.7))}
+.hero-content{position:relative;z-index:2}.eyebrow{font-size:11px;letter-spacing:.32em;color:#D6FF57;margin-bottom:16px;display:flex;gap:10px;align-items:center}.eyebrow:before{content:'';width:26px;height:1px;background:#D6FF57}
+.hero h1{font-family:'Bebas Neue';font-size:clamp(56px,15vw,92px);line-height:.86}.hero h1 i{font-family:'Instrument Serif';font-weight:400;font-style:italic;display:block;font-size:.9em;margin-top:-4px}
+.ritual{margin-top:16px;border-left:1px solid #ffffff22;padding-left:12px}.ritual b{font-family:'Instrument Serif';font-size:21px;font-weight:400}.ritual p{color:#8A8884;font-size:12.5px;margin-top:5px;line-height:1.5;max-width:32ch}
+.ignite-row{display:flex;gap:10px;margin-top:22px}.ignite{flex:1;max-width:360px;height:54px;border-radius:100px;background:#F5F2ED;color:#000;font-family:'Bebas Neue';font-size:19px;letter-spacing:.14em;display:flex;justify-content:center;align-items:center;gap:10px}
+.share-fab{width:54px;height:54px;border-radius:50%;border:1px solid #ffffff22;display:grid;place-items:center;backdrop-filter:blur(10px)}
+section{padding:38px 0 8px}.sec-head{padding:0 18px 14px;display:flex;justify-content:space-between;align-items:flex-end}.sec-head h2{font-family:'Bebas Neue';font-size:34px;line-height:.9}.sec-head small{color:#8A8884;font-size:10px;letter-spacing:.2em;text-transform:uppercase}.rule{height:1px;background:#222;margin:0 18px}
+.round-wrap{background:#111;border:1px solid #222;margin:14px 12px;border-radius:26px;overflow:hidden}.round-top{padding:18px;display:flex;justify-content:space-between}.round-badge{background:#D6FF57;color:#000;border-radius:100px;padding:5px 9px;font-size:10px;font-weight:800}.round-hero{padding:2px 18px 18px}.round-hero h3{font-family:'Instrument Serif';font-size:48px;line-height:.9;font-weight:400}.round-hero h3 em{color:#D6FF57;font-style:italic}.round-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:#222;border-top:1px solid #222;border-bottom:1px solid #222}.round-stats div{background:#151515;padding:14px 18px}.round-stats b{font-family:'Bebas Neue';font-size:24px;display:block}.round-stats span{font-size:10px;color:#8A8884;letter-spacing:.14em;text-transform:uppercase}.round-circle{width:210px;height:210px;border-radius:50%;margin:22px auto;border:1px dashed #ffffff22;display:grid;place-items:center;animation:spin 18s linear infinite}.round-cta{padding:0 18px 18px}.round-cta button{width:100%;height:50px;border-radius:100px;background:#FF3B30;color:#fff;font-weight:700;letter-spacing:.14em;font-size:12px}
+.feed{padding:0}.bite-card{position:relative;margin:0 0 2px;min-height:84svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:#000}.bite-card img{position:absolute;inset:0;height:100%;object-fit:cover}.bite-card:after{content:'';position:absolute;inset:0;background:linear-gradient(to top,#000 14%,transparent 58%)}.bite-meta{position:relative;z-index:2;padding:20px 18px}.tag{display:inline-block;border:1px solid #ffffff33;padding:4px 9px;border-radius:100px;font-size:9.5px;letter-spacing:.18em;margin-bottom:10px}.bite-meta h3{font-family:'Instrument Serif';font-size:36px;line-height:.95;font-weight:400;max-width:12ch}.bite-meta p{color:#ffffffb8;font-size:12.5px;line-height:1.5;margin-top:8px;max-width:34ch}.bite-actions{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}.bite-actions a{height:34px;padding:0 13px;border-radius:100px;border:1px solid #ffffff33;display:flex;align-items:center;font-size:11px;font-weight:700}
+.ad{position:relative;margin:22px 10px;border-radius:24px;overflow:hidden;min-height:380px;display:flex;align-items:flex-end;background:#000;border:1px solid #222}.ad img{position:absolute;inset:0;height:100%;object-fit:cover}.ad:after{content:'';position:absolute;inset:0;background:linear-gradient(to top,#000 24%,transparent 70%)}.ad-copy{position:relative;z-index:2;padding:18px}.ad-copy small{letter-spacing:.28em;font-size:9px;color:#D6FF57}.ad-copy h3{font-family:'Bebas Neue';font-size:42px;line-height:.9;margin:6px 0}.ad-copy a{display:inline-flex;margin-top:10px;height:38px;padding:0 16px;border-radius:100px;background:#F5F2ED;color:#000;align-items:center;font-weight:800;font-size:11px;letter-spacing:.12em}
+footer{padding:36px 16px 110px;color:#8A8884;font-size:10.5px;text-align:center}footer b{color:#F5F2ED;font-family:'Bebas Neue';font-size:17px;display:block;margin-bottom:6px}
+.dock{position:fixed;left:10px;right:10px;bottom:10px;z-index:60;display:flex;justify-content:space-between;align-items:center;background:rgba(18,18,18,.92);backdrop-filter:blur(22px);border:1px solid #ffffff18;border-radius:100px;padding:6px 8px 6px 6px}.dock a{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;color:#8A8884}.dock a.active{background:#F5F2ED;color:#000}.dock-ignite{height:42px;padding:0 16px;border-radius:100px;background:#F5F2ED;color:#000;font-family:'Bebas Neue';letter-spacing:.14em;font-size:14px;display:flex;align-items:center;gap:6px}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}@keyframes spin{to{transform:rotate(360deg)}}.reveal{opacity:0;transform:translateY(14px);transition:.6s}.reveal.in{opacity:1;transform:none}
 </style>
 </head>
 <body>
-  <h1>FREESTYLE<br><span>IS THE VISION.</span></h1>
-  <div class="tag">LIVEBITEZ PREMIERE • 53M ROUND</div>
-  
-  <div class="card">
-    <p style="color:#888;font-size:14px;margin-bottom:12px">TODAY'S RITUAL</p>
-    <p id="ritual" style="font-size:18px;line-height:1.4">Tap ignite to start your cinematic day. No laptop needed.</p>
-    <button class="btn" onclick="ignite()">IGNITE 🔥</button>
-    <div class="status" id="status">App ready • Offline capable</div>
-  </div>
-
 <script>
-const rituals = [
-  "Shoot 1 raw bite. No edit. Post it.",
-  "Contact 1 person who can fund the vision.",
-  "Lock in: 2 hours deep work. Phone on DND.",
-  "The beginning. Let's start here.",
-  "Freestyle is the vision. Structure is the vehicle."
-];
-function ignite(){
-  document.getElementById('ritual').innerText = rituals[Math.floor(Math.random()*rituals.length)];
-  if(navigator.vibrate) navigator.vibrate(50);
-}
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js');
-}
+// EDIT THESE 3 LINKS — THEN EVERY BUTTON UPDATES
+const REAL_LINKS={
+  SPOTIFY_PLAYLIST:"https://open.spotify.com/playlist/37i9dQZF1DX0XUsuxWHRQd",
+  APPLE_MUSIC:"https://music.apple.com/",
+  TARGET_PRODUCT:"https://www.target.com/p/frozen-fish-fillets/-/A-13086577"
+};
+</script>
+<div class="topbar"><div class="logo">FISSHHFILET × LIVEBITEZ <span>PREMIERE™ v2 • FREESTYLE IS THE VISION.</span></div><div class="live-pill"><span class="live-dot"></span>LIVE</div></div>
+<div class="hero" id="home"><div class="hero-bg"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=80&auto=format&fit=crop"></div><div class="hero-content"><div class="eyebrow">TODAY'S RITUAL • 53M ROUND™</div><h1>FISSHH<br>FILET<i>LiveBitez<br>Premiere™</i></h1><div class="ritual"><b>TODAY'S RITUAL</b><p>One link = full $100M premiere. Real Spotify + Target baked in.</p></div><div class="ignite-row"><button class="ignite" id="igniteBtn">IGNITE 🔥 • START FEED</button></div></div></div>
+<section id="round"><div class="sec-head"><h2>53M ROUND™</h2><small>SIGNATURE</small></div><div class="rule"></div><div class="round-wrap reveal"><div class="round-top"><small style="letter-spacing:.2em;color:#8A8884">FISSHHFILET × LIVEBITEZ</small><div class="round-badge">53M ROUND™</div></div><div class="round-hero"><h3>THE <em>$100M</em><br>LOOK.<br>ZERO<br>FRICTION.</h3></div><div class="round-stats"><div><b>53M</b><span>Target Views</span></div><div><b>REAL</b><span>Links Inside</span></div><div><b>1-FILE</b><span>Premiere</span></div></div><div class="round-circle"><div style="width:82px;height:82px;border-radius:50%;background:#F5F2ED;display:grid;place-items:center;color:#000;font-family:'Bebas Neue';font-size:18px;z-index:2">PLAY</div></div><div class="round-cta"><button id="roundPlay">ENTER 53M ROUND™ →</button></div></div></section>
+<section class="feed"><div class="sec-head"><h2>LIVEBITEZ FEED</h2><small>VERTICAL • REAL</small></div>
+<article class="bite-card reveal"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=900&q=80"><div class="bite-meta"><span class="tag">FOOD • TARGET REAL</span><h3>Filet, But Premiere.</h3><p>Real Target product link — no fake checkout.</p><div class="bite-actions"><a class="js-target" href="#" target="_blank">SHOP TARGET ↗</a><a class="js-spotify" href="#" target="_blank">PLAYLIST ↗</a></div></div></article>
+<article class="bite-card reveal"><img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=900&q=80"><div class="bite-meta"><span class="tag">MUSIC • REAL</span><h3>Ignite The Soundtrack.</h3><p>Your actual Spotify + Apple Music destinations.</p><div class="bite-actions"><a class="js-spotify" href="#" target="_blank">SPOTIFY ↗</a><a class="js-apple" href="#" target="_blank">APPLE MUSIC ↗</a></div></div></article>
+</section>
+<div class="ad reveal"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1000&q=80"><div class="ad-copy"><small>CINEMATIC AD • TARGET REAL PRODUCT</small><h3>YOUR KITCHEN,<br>PREMIERE EDITION.</h3><a class="js-target" href="#" target="_blank">SHOP MY TARGET PRODUCT ↗</a></div></div>
+<footer><b>FISSHHFILET × LIVEBITEZ PREMIERE™</b>FREESTYLE IS THE VISION. 53M ROUND™. IGNITE 🔥<br>One file • Real links • Android Chrome</footer>
+<nav class="dock"><a href="#home" class="active">◉</a><a href="#round">◎</a><a href="#home">▤</a><a href="#home">♫</a><button class="dock-ignite" id="dockIgnite">IGNITE 🔥</button></nav>
+<script>
+function inject(){document.querySelectorAll('.js-spotify').forEach(a=>a.href=REAL_LINKS.SPOTIFY_PLAYLIST);document.querySelectorAll('.js-apple').forEach(a=>a.href=REAL_LINKS.APPLE_MUSIC);document.querySelectorAll('.js-target').forEach(a=>a.href=REAL_LINKS.TARGET_PRODUCT);}inject();
+const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting) en.target.classList.add('in')})},{threshold:.15});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+function ignite(){if(navigator.vibrate) navigator.vibrate([30,20,60]);document.querySelector('section.feed').scrollIntoView({behavior:'smooth'});}document.getElementById('igniteBtn').onclick=ignite;document.getElementById('dockIgnite').onclick=ignite;document.getElementById('roundPlay').onclick=ignite;
 </script>
 </body>
 </html>
