@@ -2,268 +2,120 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>LIVEBITEZ PREMIERE™ — FISSHHFILET × LIVEBITEZ — 53M ROUND™</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-<meta name="theme-color" content="#D9FF00">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050507">
+<meta name="color-scheme" content="dark">
+<meta name="mobile-web-app-capable" content="yes">
+<title>LIVEBITEZ PREMIERE — 53m:AgO UNIVERSE • Android 16</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Space+Grotesk:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#050507;--card:#0E0E10;--line:rgba(255,255,255,.10);--lime:#D9FF00;--mag:#FF0A6C;--muted:rgba(255,255,255,.60)}
-*{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth} body{background:var(--bg);color:#fff;font-family:'Space Grotesk',Inter,sans-serif;overflow-x:hidden}
-.font-syne{font-family:'Syne',sans-serif} img{max-width:100%;display:block}
-button{font-family:inherit;cursor:pointer;border:0;background:0} a{color:inherit;text-decoration:none}
-.marquee{overflow:hidden;white-space:nowrap;border-bottom:1px solid var(--line);background:#000}
-.marquee-inner{display:inline-flex;animation:marq 28s linear infinite;gap:2rem;padding:8px 0}
-@keyframes marq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.live-dot{width:8px;height:8px;background:#FF2A2A;border-radius:50%;box-shadow:0 0 12px #FF2A2A;animation:pulse 1.2s infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(1.2)}}
-.hero{position:relative;min-height:92vh;display:flex;align-items:end;padding:22px 16px 28px;overflow:hidden}
-.hero-bg{position:absolute;inset:0}.hero-bg img{width:100%;height:100%;object-fit:cover}.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,5,7,.2) 0%,rgba(5,5,7,.55) 45%,#050507 90%);z-index:1}
-.hero-content{position:relative;z-index:2;width:100%;max-width:560px;margin:0 auto}
-.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid var(--line);font-size:10px;letter-spacing:.14em}
-.cta{height:54px;border-radius:999px;font-weight:700;letter-spacing:.08em;font-size:13px;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:transform.15s}
-.cta:active{transform:scale(.97)}.cta-lime{background:var(--lime);color:#000}.cta-white{background:#fff;color:#000}.cta-ghost{background:rgba(255,255,255,.08);border:1px solid var(--line);color:#fff;backdrop-filter:blur(12px)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden}
-.feed{width:100%;max-width:430px;margin:0 auto}
-.action{width:36px;height:36px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:14px}
-.action.liked{background:var(--lime);color:#000;border-color:var(--lime)}
-.bottom-nav{position:fixed;left:50%;transform:translateX(-50%);bottom:12px;width:min(430px,calc(100% - 16px));height:64px;background:rgba(14,14,16,.92);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.12);border-radius:20px;display:flex;align-items:center;justify-content:space-around;z-index:70}
-.bottom-nav button{display:flex;flex-direction:column;align-items:center;gap:3px;color:rgba(255,255,255,.55);font-size:9px;letter-spacing:.08em;font-weight:600}
-.bottom-nav button.active{color:#fff}.bottom-nav button.active span.icon{background:var(--lime);color:#000;border-radius:10px}
-.icon{width:26px;height:26px;display:flex;align-items:center;justify-content:center;border-radius:10px}
-.toast{position:fixed;left:50%;bottom:88px;transform:translateX(-50%);background:#fff;color:#000;padding:12px 18px;border-radius:999px;font-weight:700;font-size:12px;letter-spacing:.06em;z-index:80;display:none}
-.toast.show{display:flex;gap:8px;animation:slideUp.3s}
-@keyframes slideUp{from{transform:translate(-50%,20px);opacity:0}to{transform:translate(-50%,0);opacity:1}}
-.modal{position:fixed;inset:0;z-index:75;background:rgba(0,0,0,.8);backdrop-filter:blur(16px);display:none}
-.modal.open{display:flex;align-items:end;justify-content:center}
-@media(min-width:768px){.modal.open{align-items:center}}
-.progress{height:3px;background:rgba(255,255,255,.15);border-radius:999px;overflow:hidden}.progress>div{height:100%;background:var(--lime);width:0%;transition:width.3s linear}
-.heart-burst{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:72px;pointer-events:none;animation:burst.8s ease-out forwards}
-@keyframes burst{0%{transform:translate(-50%,-50%) scale(.2);opacity:0}15%{opacity:1;transform:translate(-50%,-50%) scale(1.1)}100%{opacity:0;transform:translate(-50%,-50%) scale(1.4)}}
-.reveal{opacity:0;transform:translateY(16px);transition:all.6s cubic-bezier(.16,1,.3,1)}.reveal.in{opacity:1;transform:none}
-.search{position:fixed;inset:0;z-index:77;background:#050507;display:none;flex-direction:column}.search.open{display:flex}
-.viz{display:flex;align-items:end;gap:2px;height:14px}.viz i{display:block;width:3px;background:var(--lime);border-radius:2px;animation:viz.6s infinite alternate}
-@keyframes viz{from{height:3px}to{height:14px}}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:#050507;color:#F6F3EE;font-family:'Space Grotesk',sans-serif;overflow-x:hidden;-webkit-tap-highlight-color:transparent;padding-bottom:env(safe-area-inset-bottom)}
+.syne{font-family:'Syne',sans-serif}
+.wheel-o{width:1.15em;height:1.15em;border:0.14em solid currentColor;border-radius:50%;display:inline-grid;place-items:center;transform:translateY(0.08em);line-height:1}
+.wheel-o:after{content:'';width:0.28em;height:0.28em;background:currentColor;border-radius:50%}
+.wheel-o.big{width:64px;height:64px;border-width:3px}
+.wheel-o.big:after{width:10px;height:10px}
+.colon{animation:blink 1.4s steps(2) infinite}
+@keyframes blink{0%{opacity:1}50%{opacity:.15}}
+.marquee{overflow:hidden;white-space:nowrap;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:10px 0}
+.marquee-inner{display:inline-block;animation:scroll 85s linear infinite;font-size:10px;letter-spacing:.28em;opacity:.45;will-change:transform}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.card{background:#0F0F10;border:1px solid rgba(255,255,255,.08);border-radius:28px;overflow:hidden}
+.pill{display:inline-flex;align-items:center;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);font-size:10px;letter-spacing:.14em}
+.btn{height:52px;padding:0 24px;border-radius:999px;font-weight:800;font-size:11px;letter-spacing:.18em;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;border:0}
+.btn-lime{background:#D9FF00;color:#000}
+.btn-glass{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.12)}
+.link-pill{display:flex;align-items:center;gap:8px;padding:0 6px 0 16px;height:48px;border-radius:999px;background:#F6F3EE;color:#000;font-weight:700;font-size:12px;text-decoration:none;transition:.2s}
+.link-pill:active{transform:scale(.98)}
+.link-pill i{width:30px;height:30px;border-radius:50%;background:#000;color:#F6F3EE;display:grid;place-items:center;font-style:normal}
 </style>
 </head>
 <body>
 
-<div class="marquee"><div class="marquee-inner" id="marquee"></div></div>
+<div class="marquee"><div class="marquee-inner">
+LIVE • 53m:AgO • GUCCI • PRADA • LOUIS VUITTON • BOTTEGA • VALENTINO • HERMES • VAN CLEEF • YSL • TIFFANY • SOTHEBYS • FARFETCH • EDITORIALIST • PINTEREST • WHOLE FOODS • TRADER JOES • EREWHON • VOODOO DOUGHNUTS • APPLE MUSIC • SPOTIFY • YOUTUBE • TARGET • TIKTOK • INSTAGRAM • THREADS • X • FACEBOOK • TRUTH SOCIAL • LIVE • 53m:AgO • GUCCI • PRADA • LOUIS VUITTON • BOTTEGA • VALENTINO • HERMES • VAN CLEEF • YSL • TIFFANY • SOTHEBYS • FARFETCH • EDITORIALIST • PINTEREST • WHOLE FOODS • TRADER JOES • EREWHON • VOODOO DOUGHNUTS • APPLE MUSIC • SPOTIFY • YOUTUBE • TARGET • TIKTOK • INSTAGRAM • THREADS • X • FACEBOOK • TRUTH SOCIAL •
+</div></div>
 
-<header style="position:sticky;top:0;z-index:60;background:rgba(5,5,7,.85);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:10px 14px">
-<div style="display:flex;align-items:center;gap:10px">
-<div style="width:34px;height:34px;border-radius:10px;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;font-family:Syne;font-weight:800">LB</div>
-<div><div class="font-syne" style="font-weight:800;font-size:13px;line-height:1">LIVEBITEZ PREMIERE™</div><div style="font-size:9px;letter-spacing:.14em;color:var(--muted)">FISSHHFILET × LIVEBITEZ • 53M ROUND™</div></div>
-</div>
-<div style="display:flex;align-items:center;gap:8px">
-<div class="pill"><span class="live-dot"></span>LIVE</div>
-<button onclick="openSearch()" style="width:36px;height:36px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid var(--line)">⌕</button>
-<button onclick="shareSite()" style="width:36px;height:36px;border-radius:999px;background:var(--lime);color:#000;font-weight:800">↗</button>
-</div>
+<header style="position:sticky;top:0;z-index:20;background:rgba(5,5,7,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;padding:12px 16px;align-items:center">
+<div><div class="syne" style="font-weight:800;font-size:13px">LIVEBITEZ PREMIERE™</div><div style="font-size:9px;letter-spacing:.16em;opacity:.5">53m<span class="colon">:</span>Ag<span class="wheel-o" style="width:12px;height:12px"></span> • 53 MINUTES AGO • O = WHEEL • ANDROID 16</div></div>
+<div class="pill">LIVE • 53m:AgO</div>
 </header>
 
-<section class="hero" id="home">
-<div class="hero-bg"><img id="heroImg" alt="LIVEBITEZ PREMIERE"></div>
-<div class="hero-content">
-<div class="pill" style="margin-bottom:12px">FISSHHFILET × LIVEBITEZ • THE BEGINNING.</div>
-<h1 class="font-syne" style="font-size:clamp(44px,12vw,84px);line-height:.85;font-weight:800;letter-spacing:-.04em">THE<br>BEGINNING.</h1>
-<div style="display:flex;align-items:center;gap:12px;margin-top:12px"><div style="font-family:Syne;font-weight:800;font-size:22px;background:var(--lime);color:#000;padding:6px 12px;border-radius:999px">53M ROUND™</div><div style="font-size:11px;letter-spacing:.18em;color:rgba(255,255,255,.7)">THE CULTURE IS LIVE.</div></div>
-<p style="margin-top:14px;font-size:14px;line-height:1.5;color:rgba(255,255,255,.75);max-width:36ch">One link = full $100M premiere. Real Spotify + Target baked in. Built for Android Chrome.</p>
-<div style="display:flex;gap:10px;margin-top:18px;flex-wrap:wrap">
-<button class="cta cta-lime" style="flex:1;min-width:160px" onclick="document.getElementById('live').scrollIntoView({behavior:'smooth'})">IGNITE 🔥</button>
-<button class="cta cta-ghost" style="flex:1;min-width:160px" onclick="document.getElementById('round53').scrollIntoView({behavior:'smooth'})">ENTER 53M ROUND™</button>
+<section style="max-width:1440px;margin:0 auto;padding:24px 16px">
+<div style="min-height:72vh;display:flex;flex-direction:column;justify-content:end">
+<div class="pill" style="width:fit-content;margin-bottom:12px">FISSHHFILET × LIVEBITEZ • DRACULA × BRUCE WAYNE × LORO PIANA • ANDROID 16</div>
+<h1 class="syne" style="font-size:clamp(48px,10vw,92px);line-height:.86;letter-spacing:-.05em;font-weight:800">THE<br>BEGINNING<span style="font-family:'Cormorant Garamond';font-style:italic;font-weight:400">.</span></h1>
+<div style="margin-top:18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+<div style="display:flex;align-items:baseline;gap:2px;font-family:Syne;font-weight:800;font-size:44px;letter-spacing:-.04em">53m<span class="colon">:</span>Ag<span class="wheel-o big" id="bigWheel"></span></div>
+<div style="font-size:10px;letter-spacing:.22em;opacity:.5;line-height:1.5">: = TIME DOTS<br>O = WHEEL • FEED ENDS<br>53 MINUTES AGO</div>
 </div>
-<div style="display:flex;gap:16px;margin-top:18px;border-top:1px solid rgba(255,255,255,.12);padding-top:12px">
-<div><div class="font-syne" style="font-size:20px;font-weight:800">53M</div><div style="font-size:9px;letter-spacing:.12em;color:var(--muted)">TARGET VIEWS</div></div>
-<div><div class="font-syne" style="font-size:20px;font-weight:800">REAL</div><div style="font-size:9px;letter-spacing:.12em;color:var(--muted)">LINKS INSIDE</div></div>
-<div><div class="font-syne" style="font-size:20px;font-weight:800">1-FILE</div><div style="font-size:9px;letter-spacing:.12em;color:var(--muted)">PREMIERE</div></div>
+<div style="margin-top:22px;display:flex;gap:10px;flex-wrap:wrap">
+<button class="btn btn-lime" onclick="document.getElementById('universe').scrollIntoView({behavior:'smooth'})">IGNITE 🔥 ENTER UNIVERSE</button>
+<button class="btn btn-glass" onclick="document.getElementById('feed').scrollIntoView({behavior:'smooth'})">ENTER WHEEL</button>
 </div>
+</div>
+
+<div id="feed" style="margin-top:28px;display:grid;gap:12px;max-width:430px">
+<div class="card"><div style="height:320px;background:linear-gradient(135deg,#1a1a1a,#2a221f,#0f0f0f);display:grid;place-items:center"><span style="font-size:11px;letter-spacing:.3em;opacity:.5">GUCCI • MIDNIGHT SILK • 53m:AgO</span></div><div style="padding:12px;display:flex;justify-content:space-between"><span class="syne" style="font-weight:800">MIDNIGHT SILK</span><span class="pill">53m:AgO</span></div></div>
+<div class="card"><div style="height:320px;background:linear-gradient(135deg,#1c1c19,#2e2a22,#111);display:grid;place-items:center"><span style="font-size:11px;letter-spacing:.3em;opacity:.5">BOTTEGA • CASHMERE VOID • 12m:AgO</span></div><div style="padding:12px;display:flex;justify-content:space-between"><span class="syne" style="font-weight:800">CASHMERE VOID</span><span class="pill">12m:AgO</span></div></div>
 </div>
 </section>
 
-<section id="live" style="padding:18px 12px 0">
-<div style="max-width:430px;margin:0 auto;display:flex;align-items:center;justify-content:space-between"><h2 class="font-syne" style="font-size:28px;font-weight:800">LIVEBITEZ FEED</h2><span style="font-size:10px;letter-spacing:.18em;color:var(--muted)">VERTICAL • REAL</span></div>
-<div style="max-width:430px;margin:12px auto 0;display:flex;gap:8px;overflow:auto;padding-bottom:8px" id="filters"></div>
-<div class="feed" id="feed"></div>
-<div id="adSlot1"></div>
-</section>
+<section id="universe" style="max-width:1440px;margin:40px auto;padding:0 16px 80px">
+<h2 class="syne" style="font-size:clamp(28px,5vw,56px);font-weight:800;letter-spacing:-.04em">53m<span class="colon">:</span>Ag<span class="wheel-o" style="width:.9em;height:.9em"></span> UNIVERSE</h2>
+<p style="font-size:11px;letter-spacing:.18em;opacity:.5;margin-top:6px">ANDROID 16 • ALL HOUSES • ONE WHEEL • TAP TO OPEN</p>
 
-<section id="round53" style="padding:28px 12px">
-<div style="max-width:1100px;margin:0 auto">
-<div style="display:flex;align-items:end;justify-content:space-between;gap:12px;flex-wrap:wrap"><div><div style="font-size:10px;letter-spacing:.22em;color:var(--lime)">53M ROUND™ DESTINATION</div><h2 class="font-syne" style="font-size:42px;line-height:.9;font-weight:800;margin-top:6px">53M ROUND™<br><span style="color:rgba(255,255,255,.55)">THE LIVEBITEZ CULTURE ROUND.</span></h2></div><button class="cta cta-white" style="height:40px;padding:0 16px" onclick="shareSite()">SHARE LIVEBITEZ ↗</button></div>
-<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px" id="roundGrid"></div>
+<div style="margin-top:20px;display:grid;gap:16px">
+<div class="card" style="padding:18px"><div style="font-size:12px;font-weight:800;letter-spacing:.22em;margin-bottom:12px">LUXURY • 11</div><div style="display:flex;flex-wrap:wrap;gap:8px" id="lux"></div></div>
+<div class="card" style="padding:18px"><div style="font-size:12px;font-weight:800;letter-spacing:.22em;margin-bottom:12px">FOOD • 4</div><div style="display:flex;flex-wrap:wrap;gap:8px" id="food"></div></div>
+<div class="card" style="padding:18px"><div style="font-size:12px;font-weight:800;letter-spacing:.22em;margin-bottom:12px">CULTURE + PLATFORMS • 13</div><div style="display:flex;flex-wrap:wrap;gap:8px" id="plat"></div></div>
+</div>
+
+<div style="margin-top:40px;text-align:center;padding:40px 0;border-top:1px solid rgba(255,255,255,.06)">
+<div class="wheel-o big" style="margin:0 auto;animation:spin 6s linear infinite"></div>
+<div class="syne" style="font-weight:800;font-size:28px;margin-top:16px">FEED ENDS</div>
+<div style="font-size:11px;letter-spacing:.28em;opacity:.5;margin-top:8px">53 MINUTES AGO • LOOP • O = WHEEL • ANDROID 16</div>
+<button class="btn btn-glass" style="margin-top:16px;border-color:#D9FF00;color:#D9FF00" onclick="window.scrollTo({top:0,behavior:'smooth'})">LOOP TO BEGINNING ↺</button>
 </div>
 </section>
 
-<section id="music" style="padding:12px">
-<div style="max-width:860px;margin:0 auto" class="card">
-<div style="position:relative;min-height:380px;background:#0A0A0A;overflow:hidden">
-<img id="musicArt" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(18px) brightness(.6)">
-<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.9))"></div>
-<div style="position:relative;z-index:1;padding:22px;display:flex;flex-direction:column;height:100%;min-height:380px;justify-content:end">
-<div style="display:flex;gap:14px;align-items:center">
-<img id="musicArtSm" style="width:96px;height:96px;border-radius:18px;object-fit:cover;box-shadow:0 12px 30px rgba(0,0,0,.5)">
-<div><div style="font-size:10px;letter-spacing:.18em;color:var(--lime)">FEATURED TRACK • REAL LINKS</div><div id="mTitle" class="font-syne" style="font-size:22px;font-weight:800;line-height:1.1;margin-top:4px">THE BEGINNING.</div><div id="mArtist" style="font-size:13px;color:rgba(255,255,255,.7);margin-top:2px">FISSHHFILET</div><div id="mAlbum" style="font-size:11px;color:rgba(255,255,255,.5)">53M ROUND™ VOL.1</div></div>
-</div>
-<div style="margin-top:18px">
-<div style="display:flex;align-items:center;justify-content:space-between;font-size:11px;color:rgba(255,255,255,.6)"><span id="mCur">0:00</span><div class="viz"><i style="animation-delay:0s"></i><i style="animation-delay:.1s"></i><i style="animation-delay:.2s"></i><i style="animation-delay:.3s"></i></div><span id="mDur">3:07</span></div>
-<div class="progress" style="margin-top:8px" onclick="seek(event)"><div id="mBar"></div></div>
-<div style="display:flex;align-items:center;justify-content:space-between;margin-top:14px">
-<div style="display:flex;gap:10px"><button class="action" onclick="toggleShuffle()" id="shuf">⤮</button><button class="action" onclick="prevTrack()">⏮</button></div>
-<button id="playBtn" onclick="togglePlay()" style="width:64px;height:64px;border-radius:999px;background:var(--lime);color:#000;font-size:22px;font-weight:800;display:flex;align-items:center;justify-content:center">▶</button>
-<div style="display:flex;gap:10px"><button class="action" onclick="nextTrack()">⏭</button><button class="action" id="musicLike" onclick="likeMusic()">♡</button></div>
-</div>
-</div>
-</div>
-</div>
-<div style="padding:18px">
-<div style="display:flex;gap:10px;flex-wrap:wrap">
-<button class="cta cta-lime" style="flex:1" onclick="window.open(LINKS.spotify,'_blank')">LISTEN ON SPOTIFY</button>
-<button class="cta cta-white" style="flex:1" onclick="window.open(LINKS.appleMusic,'_blank')">LISTEN ON APPLE MUSIC</button>
-</div>
-<div style="margin-top:16px;display:grid;gap:8px" id="musicList"></div>
-</div>
-</div>
-</section>
-
-<div id="adSlot2"></div>
-
-<section id="shop" style="padding:18px 12px 90px">
-<div style="max-width:1100px;margin:0 auto">
-<div style="display:flex;align-items:end;justify-content:space-between"><h2 class="font-syne" style="font-size:32px;font-weight:800">LIVEBITEZ SHOP</h2><span style="font-size:10px;letter-spacing:.18em;color:var(--muted)">REAL LINKS • EASY EDIT</span></div>
-<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px" id="shopGrid"></div>
-</div>
-</section>
-
-<div id="adSlot3"></div>
-
-<section id="profile" style="padding:12px 12px 100px">
-<div style="max-width:430px;margin:0 auto" class="card reveal">
-<div style="position:relative;height:200px"><img id="profFeat" style="width:100%;height:100%;object-fit:cover"><div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(14,14,16,.95))"></div><div style="position:absolute;left:16px;bottom:16px;display:flex;gap:12px;align-items:end"><div style="width:72px;height:72px;border-radius:20px;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;font-family:Syne;font-weight:800;font-size:28px">F</div><div><div class="font-syne" style="font-weight:800;font-size:20px">FISSHHFILET ✓</div><div style="font-size:11px;color:rgba(255,255,255,.6)">@fisshhfilet • LIVEBITEZ CREATOR • 53M ROUND™</div></div></div></div>
-<div style="padding:16px"><p style="font-size:13px;line-height:1.6;color:rgba(255,255,255,.7)">Founder • Culture architect • THE BEGINNING. Building LIVEBITEZ PREMIERE™ and 53M ROUND™ live from the culture.</p><div style="display:flex;gap:8px;margin-top:14px"><button class="cta cta-white" style="flex:1;height:44px" onclick="showToast('FOLLOWED ✓')">FOLLOW</button><button class="cta cta-ghost" style="width:44px;height:44px" onclick="shareSite()">↗</button></div></div>
-</div>
-</section>
-
-<footer style="border-top:1px solid var(--line);padding:22px 14px 90px;color:rgba(255,255,255,.7)">
-<div style="max-width:1100px;margin:0 auto"><div class="font-syne" style="font-weight:800;color:#fff">LIVEBITEZ PREMIERE™ — FISSHHFILET × LIVEBITEZ — 53M ROUND™</div><div style="margin-top:10px;display:flex;gap:8px"><button class="cta cta-lime" style="height:36px;padding:0 14px;font-size:11px" onclick="shareSite()">SHARE LIVEBITEZ</button><button class="cta cta-ghost" style="height:36px;padding:0 14px;font-size:11px" onclick="window.open(LINKS.mainSite,'_blank')">VISIT LIVE</button></div><div style="margin-top:14px;font-size:10px;letter-spacing:.14em">© 2026 LIVEBITEZ PREMIERE™ • ANDROID CHROME • 53M ROUND™</div></div>
-</footer>
-
-<nav class="bottom-nav" id="bnav">
-<button class="active" data-id="home" onclick="scrollToSec('home')"><span class="icon">◉</span>HOME</button>
-<button data-id="live" onclick="scrollToSec('live')"><span class="icon">◍</span>LIVE</button>
-<button data-id="round53" onclick="scrollToSec('round53')"><span class="icon">◐</span>53M</button>
-<button data-id="shop" onclick="scrollToSec('shop')"><span class="icon">◑</span>SHOP</button>
-<button data-id="profile" onclick="scrollToSec('profile')"><span class="icon">◒</span>PROFILE</button>
-</nav>
-
-<div class="toast" id="toast"></div>
-
-<div class="search" id="searchBox">
-<div style="padding:12px;border-bottom:1px solid var(--line);display:flex;gap:10px"><input id="searchInput" placeholder="Search creators, posts, music, products..." style="flex:1;height:46px;border-radius:999px;background:#111;border:1px solid var(--line);color:#fff;padding:0 16px;outline:none"><button onclick="closeSearch()" style="width:46px;height:46px;border-radius:999px;background:#fff;color:#000;font-weight:800">✕</button></div>
-<div id="searchRes" style="flex:1;overflow:auto;padding:12px"></div>
-</div>
-
-<div class="modal" id="roundModal"><div style="width:100%;max-width:560px;max-height:86vh;background:#0E0E10;border:1px solid var(--line);border-radius:24px 24px 0 0;overflow:hidden;display:flex;flex-direction:column"><div style="padding:14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center"><div id="roundTitle" class="font-syne" style="font-weight:800"></div><button onclick="closeRound()" style="width:36px;height:36px;border-radius:999px;background:rgba(255,255,255,.08)">✕</button></div><div id="roundBody" style="overflow:auto;padding:12px"></div></div></div>
-
+<style>@keyframes spin{to{transform:rotate(360deg)}}</style>
 <script>
-// === LINKS === EDIT YOUR REAL LINKS HERE ONCE
-const LINKS = {
- spotify: "https://open.spotify.com/",
- appleMusic: "https://music.apple.com/",
- target: "https://www.target.com/",
- instagram: "https://instagram.com/",
- youtube: "https://youtube.com/",
- tiktok: "https://tiktok.com/",
- mainSite: "https://mrprettytony.github.io/livebitez-premiere/"
+const LINKS={
+appleMusic:"https://music.apple.com/",
+spotify:"https://open.spotify.com/",
+youtube:"https://www.youtube.com/",
+target:"https://www.target.com/",
+tiktok:"https://www.tiktok.com/",
+instagram:"https://www.instagram.com/",
+threads:"https://www.threads.net/",
+x:"https://x.com/",
+facebook:"https://www.facebook.com/",
+truth:"https://truthsocial.com/",
+farfetch:"https://www.farfetch.com/",
+editorialist:"https://editorialist.com/",
+sothebys:"https://www.sothebys.com/",
+tiffanys:"https://www.tiffany.com/",
+wholeFoods:"https://www.wholefoodsmarket.com/",
+traderJoes:"https://www.traderjoes.com/",
+erewhon:"https://www.erewhon.com/",
+voodoo:"https://www.voodoodoughnut.com/",
+pinterest:"https://www.pinterest.com/",
+gucci:"https://www.gucci.com/",
+prada:"https://www.prada.com/",
+louisVuitton:"https://us.louisvuitton.com/",
+bottega:"https://www.bottegaveneta.com/",
+valentino:"https://www.valentino.com/",
+hermes:"https://www.hermes.com/",
+vanCleef:"https://www.vancleefarpels.com/",
+ysl:"https://www.ysl.com/"
 };
-// === MEDIA === EDIT IMAGES HERE
-const MEDIA = {
- hero: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1200&q=80",
- music: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80",
- food: "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80",
- fashion: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80",
- sports: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80",
- culture: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80",
- shop: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80",
- entertainment: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&q=80"
-};
-const PRODUCTS = [
- {id:1,brand:"LIVEBITEZ PREMIERE™",name:"FISSHHFILET × LIVEBITEZ v2",desc:"Limited premiere capsule — 53M heritage.",price:"53.00",image:"https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&q=80",url:LINKS.target},
- {id:2,brand:"53M ROUND™",name:"PREMIERE HOODIE LIME",desc:"Heavyweight 450gsm, boxy fit.",price:"120.00",image:MEDIA.fashion,url:LINKS.target},
- {id:3,brand:"FISSHHFILET",name:"CULTURE VINYL + DIGITAL",desc:"First pressing + premiere code.",price:"45.00",image:MEDIA.music,url:LINKS.target},
- {id:4,brand:"LIVEBITEZ SHOP",name:"PREMIERE TOTE BLACK",desc:"Editorial tote, 53M emboss.",price:"38.00",image:MEDIA.shop,url:LINKS.target},
-];
-const ADS = [
- {id:"ad1",label:"PREMIERE AD",brand:"LIVEBITEZ SELECT × FISSHHFILET",headline:"THE CULTURE IS NOT WAITING.",sub:"53M views target. One premiere.",image:"https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=800&q=80",cta:"SHOP THE MOMENT",url:LINKS.target},
- {id:"ad2",label:"FEATURED MOMENT",brand:"53M ROUND™ PRESENTS",headline:"LIVE FROM THE ROUND.",sub:"Music • Food • Fashion • Sports live.",image:"https://images.unsplash.com/photo-1516450360452-9312abbf6f7e?w=800&q=80",cta:"ENTER LIVE",url:LINKS.mainSite},
- {id:"ad3",label:"53M ROUND PRESENTS",brand:"CULTURE PARTNER",headline:"EDITORIAL SHOPPING. REAL CULTURE.",sub:"Curated products as entertainment.",image:"https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80",cta:"SHOP NOW",url:LINKS.target},
-];
-const POSTS = [
- {id:1,creatorId:"fisshhfilet",creator:"FISSHHFILET",avatar:"F",verified:true,category:"CULTURE",headline:"FISSHHFILET × LIVEBITEZ — THE BEGINNING.",caption:"One link = full $100M premiere. Real Spotify + Target baked in.",image:MEDIA.hero,likes:5300,comments:342,shares:210,music:true,shoppable:true},
- {id:2,creatorId:"soul",creator:"SOUL KITCHEN",avatar:"S",verified:false,category:"FOOD",headline:"Filet, But Premiere.",caption:"Late night filet ritual — plated like a magazine cover.",image:MEDIA.food,likes:1820,comments:92,shares:44,music:false,shoppable:true},
- {id:3,creatorId:"nova",creator:"NOVA WAVE",avatar:"N",verified:true,category:"MUSIC",headline:"Ignite The Soundtrack.",caption:"THE BEGINNING. streaming now — tap to enter music round.",image:MEDIA.music,likes:4210,comments:201,shares:180,music:true,shoppable:false},
- {id:4,creatorId:"livebitez",creator:"STREET LUXE",avatar:"SL",verified:true,category:"FASHION",headline:"The $100M Look. Zero Friction.",caption:"Premiere hoodie editorial drop — heavyweight, boxy, glass embroidery.",image:MEDIA.fashion,likes:3102,comments:120,shares:98,music:false,shoppable:true},
- {id:5,creatorId:"livebitez",creator:"LIVEBITEZ",avatar:"L",verified:true,category:"SPORTS",headline:"53M ROUND™ — LIVE MOMENTS",caption:"Courtside energy, premiere angles.",image:MEDIA.sports,likes:2890,comments:88,shares:65,music:false,shoppable:false},
- {id:6,creatorId:"livebitez",creator:"LIVEBITEZ",avatar:"L",verified:true,category:"ENTERTAINMENT",headline:"PREMIERE NIGHT EDITORIAL",caption:"Cinematic drop — every card feels like Apple TV + Instagram editorial.",image:MEDIA.entertainment,likes:5120,comments:310,shares:220,music:false,shoppable:false},
-];
-const MUSIC_DATA = [
- {id:1,title:"THE BEGINNING.",artist:"FISSHHFILET",album:"53M ROUND™ VOL.1",artwork:MEDIA.music,duration:187,url:LINKS.spotify},
- {id:2,title:"LIVE CULTURE",artist:"LIVEBITEZ SOUND",album:"PREMIERE NIGHTS",artwork:"https://images.unsplash.com/photo-1471478331149-c72f17e33c73?w=800&q=80",duration:212,url:LINKS.appleMusic},
- {id:3,title:"MIDNIGHT PREMIERE",artist:"NOVA WAVE",album:"AFTER HOURS",artwork:"https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80",duration:168,url:LINKS.spotify},
- {id:4,title:"53M ENERGY",artist:"FISSHHFILET x NOVA",album:"ROUND SESSIONS",artwork:MEDIA.entertainment,duration:203,url:LINKS.spotify},
-];
-const CREATORS = [{id:"fisshhfilet",name:"FISSHHFILET"}];
-function getPosts(){return POSTS} function getCreators(){return CREATORS} function getProducts(){return PRODUCTS} function getMusic(){return MUSIC_DATA} function getAds(){return ADS}
-let likedSet=new Set(), savedSet=new Set(), currentFilter="ALL", curTrack=0, isPlaying=false, progress=0, timer=null;
-function init(){
- document.getElementById('heroImg').src=MEDIA.hero;
- document.getElementById('profFeat').src=MEDIA.hero;
- document.getElementById('marquee').innerHTML = Array(4).fill(['LIVE','CULTURE','MUSIC','FOOD','FASHION','SPORTS','ENTERTAINMENT','SHOPPING','53M ROUND™','FISSHHFILET × LIVEBITEZ','PREMIERE']).flat().map(t=>`<span>${t}</span><span style="opacity:.2">•</span>`).join('');
- renderFilters(); renderFeed(); renderRound(); renderShop(); renderMusicList(); renderAds(); setupObserver(); updateMusicUI();
-}
-function renderFilters(){
- const cats=["ALL","LIVE NOW","MUSIC","FOOD","STYLE","SPORTS","ENTERTAINMENT","SHOP","CULTURE"];
- const icons={ALL:"🔥","LIVE NOW":"🔥",MUSIC:"🎵",FOOD:"🍽",STYLE:"👟",SPORTS:"🏀",ENTERTAINMENT:"🎬",SHOP:"🛍",CULTURE:"🌎"};
- document.getElementById('filters').innerHTML=cats.map(c=>`<button onclick="setFilter('${c}')" class="pill" style="white-space:nowrap;${currentFilter===c?'background:var(--lime);color:#000;border-color:var(--lime);font-weight:700':''}">${icons[c]||'•'} ${c}</button>`).join('');
-}
-function setFilter(f){currentFilter=f;renderFilters();renderFeed();}
-function renderFeed(){
- const list = currentFilter==="ALL"? POSTS : POSTS.filter(p=> p.category.includes(currentFilter) || currentFilter==="LIVE NOW" || (currentFilter==="STYLE" && p.category==="FASHION") || (currentFilter==="SHOP" && p.shoppable));
- let html="";
- list.forEach((p,i)=>{
-  if(i===2) html+=adCard(ADS[0]);
-  html+=`<div class="card reveal" style="margin-bottom:12px"><div style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px"><div style="display:flex;align-items:center;gap:10px"><div style="width:34px;height:34px;border-radius:999px;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px">${p.avatar}</div><div><div style="font-size:13px;font-weight:700">${p.creator} ${p.verified?'✓':''}</div><div style="font-size:10px;letter-spacing:.12em;color:var(--muted)">${p.category} • LIVE NOW</div></div></div><button class="action">⋯</button></div><div style="position:relative;aspect-ratio:4/5;background:#111;overflow:hidden" ondblclick="like(${p.id})"><img src="${p.image}" loading="lazy" style="width:100%;height:100%;object-fit:cover">${p.music?'<div style="position:absolute;left:12px;top:12px" class="pill">🎵 MUSIC</div>':''}${p.shoppable?`<button class="cta cta-white" style="position:absolute;right:12px;bottom:12px;height:32px;padding:0 12px;font-size:11px" onclick="window.open('${LINKS.target}','_blank')">SHOP</button>`:''}</div><div style="padding:12px 14px"><div class="font-syne" style="font-weight:800;font-size:18px;line-height:1.1">${p.headline}</div><div style="font-size:12px;color:rgba(255,255,255,.65);margin-top:6px">${p.caption}</div><div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px"><div style="display:flex;gap:8px;align-items:center"><button class="action ${likedSet.has(p.id)?'liked':''}" onclick="like(${p.id})" id="like-${p.id}">${likedSet.has(p.id)?'♥':'♡'}</button><span id="like-c-${p.id}" style="font-size:12px;font-weight:700">${(p.likes + (likedSet.has(p.id)?1:0)).toLocaleString()}</span><button class="action" onclick="showToast('Comments demo')">💬</button><button class="action" onclick="sharePost(${p.id})">↗</button></div><button class="action ${savedSet.has(p.id)?'liked':''}" onclick="savePost(${p.id})">${savedSet.has(p.id)?'★':'☆'}</button></div></div></div>`;
- });
- document.getElementById('feed').innerHTML=html; setupObserver();
-}
-function adCard(ad){ return `<div class="card reveal" style="margin-bottom:12px;position:relative;overflow:hidden"><div style="position:absolute;inset:0"><img src="${ad.image}" style="width:100%;height:100%;object-fit:cover"></div><div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.2) 100%)"></div><div style="position:relative;padding:18px;display:flex;flex-direction:column;gap:8px;min-height:180px;justify-content:center"><div style="font-size:10px;letter-spacing:.18em;color:var(--lime)">${ad.label}</div><div class="font-syne" style="font-size:22px;font-weight:800;line-height:.95;max-width:18ch">${ad.headline}</div><div style="font-size:11px;color:rgba(255,255,255,.7)">${ad.sub}</div><button class="cta cta-lime" style="margin-top:8px;height:36px;padding:0 14px;align-self:start;font-size:11px" onclick="window.open('${ad.url}','_blank')">${ad.cta}</button></div></div>`; }
-function renderAds(){ document.getElementById('adSlot1').innerHTML=adCard(ADS[1]); document.getElementById('adSlot2').innerHTML=`<div style="padding:0 12px"><div style="max-width:1100px;margin:0 auto">${adCard(ADS[2])}</div></div>`; document.getElementById('adSlot3').innerHTML=`<div style="padding:0 12px 12px"><div style="max-width:1100px;margin:0 auto">${adCard(ADS[0])}</div></div>`; }
-function renderRound(){ const cards=[{k:"MUSIC",title:"MUSIC",desc:"Spotify + Apple",img:MEDIA.music},{k:"FOOD",title:"FOOD",desc:"Rituals",img:MEDIA.food},{k:"FASHION",title:"FASHION",desc:"$100M look",img:MEDIA.fashion},{k:"SPORTS",title:"SPORTS",desc:"Live moments",img:MEDIA.sports},{k:"ENTERTAINMENT",title:"ENTERTAINMENT",desc:"Premiere nights",img:MEDIA.entertainment},{k:"CREATORS",title:"CREATORS",desc:"53M creators",img:MEDIA.culture},{k:"SHOPPING",title:"SHOPPING",desc:"Shop moment",img:MEDIA.shop},{k:"LIVE",title:"LIVE MOMENTS",desc:"Everything live",img:MEDIA.hero},]; document.getElementById('roundGrid').innerHTML=cards.map(c=>`<div class="card" style="position:relative;min-height:200px;cursor:pointer" onclick="openRound('${c.k}')"><img src="${c.img}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.85))"></div><div style="position:absolute;left:12px;top:12px" class="pill">${c.k}</div><div style="position:absolute;left:12px;right:12px;bottom:12px"><div class="font-syne" style="font-weight:800;font-size:22px">${c.title}</div><div style="font-size:11px;color:rgba(255,255,255,.7)">${c.desc}</div></div></div>`).join(''); }
-function renderShop(){ document.getElementById('shopGrid').innerHTML=PRODUCTS.map(p=>`<div class="card"><img src="${p.image}" loading="lazy" style="aspect-ratio:1/1;object-fit:cover;width:100%"><div style="padding:12px"><div style="font-size:10px;letter-spacing:.12em;color:var(--muted)">${p.brand}</div><div style="font-weight:700;font-size:14px;margin-top:2px">${p.name}</div><div style="font-size:11px;color:rgba(255,255,255,.6);margin-top:4px">${p.desc}</div><div style="display:flex;align-items:center;justify-content:space-between;margin-top:10px"><div class="font-syne" style="font-weight:800">$${p.price}</div><button class="cta cta-white" style="height:32px;padding:0 12px;font-size:11px" onclick="window.open('${p.url}','_blank')">SHOP NOW</button></div></div></div>`).join(''); }
-function renderMusicList(){ document.getElementById('musicList').innerHTML=MUSIC_DATA.map((m,i)=>`<div style="display:flex;align-items:center;gap:12px;padding:10px;border-radius:14px;background:${i===curTrack?'rgba(255,255,255,.08)':'rgba(255,255,255,.03)'};border:1px solid var(--line);cursor:pointer" onclick="playTrack(${i})"><img src="${m.artwork}" style="width:48px;height:48px;border-radius:10px;object-fit:cover"><div style="flex:1"><div style="font-weight:700;font-size:13px">${m.title}</div><div style="font-size:11px;color:var(--muted)">${m.artist} • ${m.album}</div></div><div style="font-size:11px;color:var(--muted)">${Math.floor(m.duration/60)}:${String(m.duration%60).padStart(2,'0')}</div></div>`).join(''); }
-function like(id){ const el=document.getElementById('like-'+id); const c=document.getElementById('like-c-'+id); const post=POSTS.find(p=>p.id===id); if(likedSet.has(id)){likedSet.delete(id); if(el){el.classList.remove('liked'); el.textContent='♡'} if(c) c.textContent=(post.likes).toLocaleString(); } else {likedSet.add(id); if(el){el.classList.add('liked'); el.textContent='♥'} if(c) c.textContent=(post.likes+1).toLocaleString();} }
-function savePost(id){ if(savedSet.has(id)) savedSet.delete(id); else savedSet.add(id); renderFeed(); showToast(savedSet.has(id)?'SAVED ✓':'UNSAVED'); }
-function sharePost(id){ const p=POSTS.find(x=>x.id===id); const data={title:p.headline,text:p.caption,url:LINKS.mainSite}; if(navigator.share) navigator.share(data).catch(()=>copy(LINKS.mainSite)); else copy(LINKS.mainSite); }
-function shareSite(){ const data={title:'LIVEBITEZ PREMIERE™',text:'FISSHHFILET × LIVEBITEZ — THE BEGINNING. 53M ROUND™',url:LINKS.mainSite}; if(navigator.share) navigator.share(data).catch(()=>copy(LINKS.mainSite)); else copy(LINKS.mainSite); }
-function copy(t){ navigator.clipboard.writeText(t).then(()=>showToast('LINK COPIED ✓')).catch(()=>showToast('COPY: '+t)); }
-function showToast(t){ const el=document.getElementById('toast'); el.textContent=t; el.classList.add('show'); clearTimeout(el._t); el._t=setTimeout(()=>el.classList.remove('show'),2200); }
-function scrollToSec(id){ document.getElementById(id).scrollIntoView({behavior:'smooth'}); document.querySelectorAll('.bottom-nav button').forEach(b=>b.classList.toggle('active', b.dataset.id===id)); }
-function updateMusicUI(){ const m=MUSIC_DATA[curTrack]; document.getElementById('musicArt').src=m.artwork; document.getElementById('musicArtSm').src=m.artwork; document.getElementById('mTitle').textContent=m.title; document.getElementById('mArtist').textContent=m.artist; document.getElementById('mAlbum').textContent=m.album; document.getElementById('mDur').textContent=fmt(m.duration); renderMusicList(); }
-function fmt(s){ return Math.floor(s/60)+':'+String(s%60).padStart(2,'0'); }
-function togglePlay(){ isPlaying=!isPlaying; document.getElementById('playBtn').textContent=isPlaying?'❚❚':'▶'; if(isPlaying){ timer=setInterval(()=>{ progress+=0.6; if(progress>=100){ progress=0; nextTrack(); } document.getElementById('mBar').style.width=progress+'%'; document.getElementById('mCur').textContent=fmt(Math.floor(MUSIC_DATA[curTrack].duration*progress/100)); }, 200);} else clearInterval(timer); }
-function playTrack(i){ curTrack=i; progress=0; document.getElementById('mBar').style.width='0%'; updateMusicUI(); if(!isPlaying) togglePlay(); }
-function nextTrack(){ curTrack=(curTrack+1)%MUSIC_DATA.length; progress=0; updateMusicUI(); }
-function prevTrack(){ curTrack=(curTrack-1+MUSIC_DATA.length)%MUSIC_DATA.length; progress=0; updateMusicUI(); }
-function seek(e){ const rect=e.currentTarget.getBoundingClientRect(); progress=((e.clientX-rect.left)/rect.width)*100; document.getElementById('mBar').style.width=progress+'%'; }
-function toggleShuffle(){ showToast('SHUFFLE — demo'); }
-function likeMusic(){ const b=document.getElementById('musicLike'); b.textContent=b.textContent==='♡'?'♥':'♡'; b.classList.toggle('liked'); showToast('SAVED TO LIBRARY ✓'); }
-function openRound(k){ document.getElementById('roundTitle').textContent=k+' • 53M ROUND™'; const list = POSTS.filter(p=> k==='LIVE' || p.category.includes(k) || (k==='MUSIC'&&p.music) || (k==='SHOPPING'&&p.shoppable)).map(p=>`<div style="display:flex;gap:12px;padding:12px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--line);margin-bottom:8px"><img src="${p.image}" style="width:64px;height:64px;border-radius:12px;object-fit:cover"><div><div style="font-weight:700;font-size:13px">${p.headline}</div><div style="font-size:11px;color:var(--muted)">${p.caption.slice(0,80)}...</div></div></div>`).join(''); document.getElementById('roundBody').innerHTML=list + `<button class="cta cta-lime" style="width:100%;height:44px;margin-top:12px" onclick="closeRound()">ENTER ${k}</button>`; document.getElementById('roundModal').classList.add('open'); }
-function closeRound(){ document.getElementById('roundModal').classList.remove('open'); }
-function openSearch(){ document.getElementById('searchBox').classList.add('open'); document.getElementById('searchInput').focus(); doSearch(); }
-function closeSearch(){ document.getElementById('searchBox').classList.remove('open'); }
-function doSearch(){ const q=(document.getElementById('searchInput').value||'').toLowerCase(); const res=[]; if(!q){ document.getElementById('searchRes').innerHTML='<div style="color:var(--muted);font-size:13px;padding:12px">Type to search...</div>'; return; } POSTS.filter(p=> (p.headline+p.caption+p.category).toLowerCase().includes(q)).forEach(p=>res.push(`<div style="padding:12px;border-bottom:1px solid var(--line)"><div style="font-weight:700">${p.headline}</div><div style="font-size:11px;color:var(--muted)">${p.category}</div></div>`)); document.getElementById('searchRes').innerHTML=res.length?res.join(''):`<div style="padding:20px;color:var(--muted)">No results for "${q}"</div>`; }
-document.getElementById('searchInput')?.addEventListener('input',doSearch);
-function setupObserver(){ const io=new IntersectionObserver((es)=>{ es.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); }); },{threshold:.12}); document.querySelectorAll('.reveal').forEach(el=>io.observe(el)); }
-window.addEventListener('load',init);
+function pill(l,k){return `<a class="link-pill" href="${LINKS[k]||'#'}" target="_blank" rel="noopener">${l} <i>↗</i></a>`}
+document.getElementById('lux').innerHTML=[["GUCCI","gucci"],["PRADA","prada"],["LOUIS VUITTON","louisVuitton"],["BOTTEGA VENETA","bottega"],["VALENTINO","valentino"],["HERMES","hermes"],["VAN CLEEF","vanCleef"],["YSL","ysl"],["TIFFANY","tiffanys"],["SOTHEBYS","sothebys"],["FARFETCH","farfetch"]].map(([l,k])=>pill(l,k)).join('');
+document.getElementById('food').innerHTML=[["WHOLE FOODS","wholeFoods"],["TRADER JOES","traderJoes"],["EREWHON","erewhon"],["VOODOO DOUGHNUTS","voodoo"]].map(([l,k])=>pill(l,k)).join('');
+document.getElementById('plat').innerHTML=[["APPLE MUSIC","appleMusic"],["SPOTIFY","spotify"],["YOUTUBE","youtube"],["TARGET","target"],["TIKTOK","tiktok"],["INSTAGRAM","instagram"],["THREADS","threads"],["X","x"],["FACEBOOK","facebook"],["TRUTH SOCIAL","truth"],["PINTEREST","pinterest"],["EDITORIALIST","editorialist"]].map(([l,k])=>pill(l,k)).join('');
+let r=0;setInterval(()=>{r+=0.2;document.getElementById('bigWheel').style.transform=`rotate(${r}deg)`},30);
 </script>
 </body>
-                                                                           </html>
+</html>
